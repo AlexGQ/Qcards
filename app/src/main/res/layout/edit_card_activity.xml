@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+   
+<LinearLayout 
+   android:layout_width="match_parent"
+   android:layout_height= "match_parent"
+   android:orientation="vertical">
+   
+    <!-- Card Image -->
+   <ImageView
+       android:id="@+id/ecard_image"
+       android:layout_width="match_parent"
+ 	   android:layout_height="wrap_content"
+ 	   android:layout_marginLeft="-1dip"
+ 	   android:layout_marginRight="-1dip"
+       android:adjustViewBounds="true" />
+   
+   <RelativeLayout
+   android:layout_width="match_parent"
+   android:layout_height="370dp"
+   android:paddingBottom="@dimen/activity_vertical_margin"
+   android:paddingLeft="@dimen/activity_horizontal_margin"
+   android:paddingRight="@dimen/activity_horizontal_margin"
+   android:paddingTop="@dimen/activity_vertical_margin">
+   
+    <TextView
+      android:id="@+id/TextId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/DisplayTextId"
+      android:layout_alignParentLeft="true"
+      android:layout_toLeftOf="@+id/DisplayTextId"
+      android:text="@string/ContactId"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+   
+   
+   <TextView
+      android:id="@+id/DisplayTextId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/EditTextCity"
+      android:layout_marginTop="40dp"
+      android:layout_alignLeft="@+id/EditTextName"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/EditTextName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="82dp"
+      android:ems="10"
+      android:inputType="text" >
+   <requestFocus />
+   </EditText>
+
+   <EditText
+      android:id="@+id/EditTextEmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/EditTextStreet"
+      android:layout_below="@+id/EditTextStreet"
+      android:layout_marginTop="22dp"
+      android:ems="10"
+      android:inputType="textEmailAddress" />
+
+   <TextView
+      android:id="@+id/TextName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/EditTextName"
+      android:layout_alignParentLeft="true"
+      android:text="@string/name"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+  
+
+   <TextView
+      android:id="@+id/TextEmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/EditTextEmail"
+      android:layout_alignLeft="@+id/TextName"
+      android:text="@string/email"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <TextView
+      android:id="@+id/TextPhone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/EditTextPhone"
+      android:layout_alignLeft="@+id/TextName"
+      android:text="@string/phone"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <TextView
+      android:id="@+id/TextStreet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/EditTextEmail"
+      android:layout_alignLeft="@+id/TextPhone"
+      android:text="@string/street"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/EditTextCity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignRight="@+id/EditTextName"
+      android:layout_below="@+id/EditTextEmail"
+      android:layout_marginTop="30dp"
+      android:ems="10"
+      android:inputType="text" />
+
+   <TextView
+      android:id="@+id/TextCity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/EditTextCity"
+      android:layout_alignBottom="@+id/EditTextCity"
+      android:layout_alignParentLeft="true"
+      android:layout_toLeftOf="@+id/EditTextEmail"
+      android:text="@string/country"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/EditTextStreet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/EditTextName"
+      android:layout_below="@+id/EditTextPhone"
+      android:ems="10"
+      android:inputType="text" />
+
+      
+
+   <EditText
+      android:id="@+id/EditTextPhone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/EditTextStreet"
+      android:layout_below="@+id/EditTextName"
+      android:ems="10"
+      android:inputType="phone|text" />
+	</RelativeLayout>
+   
+   
+   	   
+   <!-- Connections -->
+   <TextView
+       android:id="@+id/econnections"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dip"
+       android:textColor="#FFFFFF"
+       android:typeface="sans"
+       android:textSize="13dip"
+       android:textStyle="bold" 
+       android:text="CONNECTIONS"/>
+   
+   <!-- Line -->
+    <View
+       android:id="@+id/SplitLine1"
+       android:layout_width="match_parent"
+       android:layout_height= "2dp"
+       android:layout_marginTop="10dip"
+       android:background="#d3d3d3" />
+	    
+    <LinearLayout android:id="@+id/elink_icons1"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="20dip"
+    	android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
+    	android:orientation="horizontal" >
+	    
+    	<ImageView
+	        android:id="@+id/eimage_icon1" 
+        	android:layout_width="0dp"
+	        android:layout_weight="0.2"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/ic_twitter"
+        	android:layout_alignParentLeft="true" />
+		    
+		<ImageView 
+		    android:id="@+id/eimage_icon2"
+		    android:layout_width="0dp"
+	        android:layout_weight="0.2"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/ic_whatsapp"
+		    android:layout_toRightOf="@id/image_icon1" />
+		    
+	    <ImageView
+	        android:id="@+id/eimage_icon3"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_linkedin"
+	        android:layout_toRightOf="@id/image_icon2"
+	        android:layout_centerVertical="true"/>
+		    
+	    <ImageView
+	        android:id="@+id/eimage_icon4" 
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_googleplus"
+	        android:layout_toRightOf="@id/image_icon3"
+	        android:layout_centerVertical="true"/>
+	    
+	  </LinearLayout>
+	  
+    <LinearLayout android:id="@+id/elink_icons2"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="20dip"
+    	android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
+    	android:orientation="horizontal" >
+		    
+	    <ImageView
+	        android:id="@+id/eimage_icon5" 
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_youtube"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"/>
+		    
+	    <ImageView
+	        android:id="@+id/eimage_icon6" 
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:src="@drawable/ic_facebook"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"/>
+	    
+	    <ImageView
+	        android:id="@+id/eimage_icon7" 
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_phone"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"/>
+		    
+	    <ImageView
+	        android:id="@+id/eimage_icon8" 
+	        android:layout_height="wrap_content"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:src="@drawable/ic_gmail"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"/>
+	    
+	 </LinearLayout>
+ </LinearLayout>		 
+
+</ScrollView>

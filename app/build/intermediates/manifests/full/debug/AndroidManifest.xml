@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.qcards"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.qcards.customlistviewvolley.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.qcards.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.example.qcards.sharecards.FileSelectActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.qcards.receivecards.GetCardsNFC"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/com.example.qcards" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.flavienlaurent.notboringactionbar.ShowCardActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.qcards.displayingbitmapscards.ImageDetailActivity"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.qcards.cardlayouts.MyAvatarActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.qcards.contactsqlite.EditCardAvatar"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.qcards.groups.ActivityGroupCards"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.qcards.preferences.SettingsActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.qcards.GetFileCardsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.json" />
+                <data android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:mimeType="application/*"
+                    android:pathPattern=".*\\.json"
+                    android:scheme="file" />
+                <data
+                    android:mimeType="application/*"
+                    android:pathPattern=".*\\.json"
+                    android:scheme="content" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.json"
+                    android:scheme="http" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.json"
+                    android:scheme="https" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.json"
+                    android:scheme="ftp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.qcards.MainActivity"
+            android:label="@string/app_name"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+
+            <!-- To support below API Level 14 -->
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Search results activity -->
+
+        <activity
+            android:name="com.example.qcards.SearchResultsActivity"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <!-- To support below API Level 14 -->
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- New contact activity -->
+
+        <activity
+            android:name="com.example.qcards.contactsqlite.NewContactActivity"
+            android:label="@string/title_activity_new_contact"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.MainActivity" />
+        </activity>
+
+        <!-- Display contact activity -->
+
+        <activity
+            android:name="com.example.qcards.contactsqlite.DisplayContactActivity"
+            android:label="@string/title_activity_display_contact"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.contactsqlite.NewContactActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.contactsqlite.NewContactActivity" />
+        </activity>
+
+        <!-- Display Card activity -->
+
+        <activity
+            android:name="com.example.qcards.contactsqlite.DisplayCardActivity"
+            android:label="@string/title_activity_display_card"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.tabpanel.Tab1Activity"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.tabpanel1.Tab1Activity" />
+        </activity>
+
+        <!-- Display cards layouts activity -->
+
+        <activity
+            android:name="com.example.qcards.hviewcards.DisplayCardsLayouts"
+            android:label="@string/title_activity_display_cards"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.MainActivity"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.MainActivity" />
+        </activity>
+
+        <!-- Edit cards activity -->
+
+        <activity
+            android:name="com.example.qcards.contactsqlite.EditCardActivity"
+            android:label="@string/title_activity_edit_card"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.hviewcards.DisplayCardsLayouts" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.hviewcards.DisplayCardsLayouts" />
+        </activity>
+
+        <!-- Sign in activity -->
+
+        <activity
+            android:name="com.example.qcards.signin.SignInActivity"
+            android:label="@string/title_activity_list"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.MainActivity" />
+        </activity>
+
+        <!-- Display users list activity -->
+
+        <activity
+            android:name="com.example.qcards.signin.DisplayUsersList"
+            android:label="@string/title_activity_list"
+            android:launchMode="standard"
+            android:parentActivityName="com.example.qcards.signin.SignInActivity" >
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.qcards.signin.SignInActivity" />
+        </activity>
+
+        <!-- Location found activity -->
+
+        <activity
+            android:name="com.example.qcards.LocationFound"
+            android:label="@string/activity_location_found"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+
+            <!-- To support below API Level 14 -->
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+
+        <!-- NFC activity -->
+        <activity
+            android:name="com.example.qcards.sharecards.NfcActivity"
+            android:label="@string/activity_nfc"
+            android:parentActivityName="com.example.qcards.MainActivity" >
+        </activity>
+    </application>
+
+</manifest>

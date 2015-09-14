@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="8dp" >
+ 
+    <!--  ListRow Left sied Thumbnail image -->
+    <!-- <com.android.volley.toolbox.NetworkImageView -->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="8dp"/>
+ 
+    <!-- Person name -->
+    <TextView
+        android:id="@+id/person_named"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatar"
+        android:layout_toRightOf="@+id/avatar"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+    
+    <!-- E-mail -->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_named"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/avatar"
+        android:textSize="@dimen/item_drawer" />
+ 
+</RelativeLayout>

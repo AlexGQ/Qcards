@@ -1,0 +1,87 @@
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory 
+        android:title="@string/pref_account_title"
+        android:key="pref_key_account">
+    <com.example.qcards.preferences.CustomPreference
+            android:key="button_profile_photo"
+ 			android:title="@string/button_pphoto"
+ 			android:summary="@string/prefs_summ_button_photo"
+ 			android:persistent="false"
+            />
+    
+    <Preference
+            android:key="prefs_summ_button_email"
+            android:title="@string/button_email"
+            android:summary="@string/prefs_summ_button_email"
+            android:persistent="false" />
+    
+    
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/pref_cards_upload_title"
+        android:key="pref_key_cards_upload">
+    <ListPreference
+	            android:key="button_how_to_upload"
+	    		android:title="@string/button_to_upload"
+	    		android:summary="@string/prefs_summ_button_toupload"
+	    		android:entries="@array/settings_push_hupload_human_value"
+	    		android:entryValues="@array/settings_push_hupload_phone_value"
+	    		android:defaultValue="0">
+	</ListPreference>
+    
+    </PreferenceCategory>
+    
+    <!-- opens a subscreen of settings -->
+    <PreferenceScreen
+        android:key="button_voicemail_category_key"
+        android:title="@string/button_help"
+        android:persistent="false">
+        <ListPreference
+            android:key="button_voicemail_provider_key"
+            android:title="@string/button_account" />
+        <!-- opens another nested subscreen -->
+        <PreferenceScreen
+            android:key="button_voicemail_setting_key"
+            android:title="@string/button_notifications"
+            android:persistent="false">
+    
+        </PreferenceScreen>
+        <RingtonePreference
+            android:key="button_voicemail_ringtone_key"
+            android:title="@string/button_about"
+            android:ringtoneType="notification" />
+    
+    </PreferenceScreen>
+    
+    <PreferenceCategory
+        android:title="@string/pref_general_title"
+        android:key="pref_key_general">
+     <Preference
+            android:key="button_about"
+            android:title="@string/button_about"
+            android:summary="@string/prefs_summ_button_about"
+            android:persistent="false" />
+    <Preference
+            android:key="button_activate_full"
+            android:title="@string/button_activate_full"
+            android:persistent="false" />
+    <ListPreference
+	            android:key="list_language"
+	    		android:title="@string/button_language"
+	    		android:summary="@string/prefs_summ_button_language"
+	    		android:entries="@array/settings_push_language_human_value"
+	    		android:entryValues="@array/settings_push_language_phone_value"
+	    		android:defaultValue="0">
+	</ListPreference>
+
+    <Preference
+            android:key="button_legacy"
+            android:title="@string/button_legacy"
+            android:persistent="false" />
+    </PreferenceCategory>
+    
+    
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.qcards.BasicInstrumentationTest" tests="1" failures="0" errors="0" skipped="0" time="2.55" timestamp="2015-09-13T07:23:18" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5 - 5.1.1" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testClickActionBarItem" classname="com.example.qcards.BasicInstrumentationTest" time="2.509" />
+</testsuite>

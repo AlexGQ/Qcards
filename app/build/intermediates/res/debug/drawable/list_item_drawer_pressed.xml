@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+  <gradient
+      android:startColor="@color/gray_dialog"
+      android:endColor="@color/white_dialog"
+      android:angle="90" />
+</shape><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/drawable/list_item_drawer_pressed.xml -->

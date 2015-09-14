@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="8dp" >
+ 
+    <!--  ListRow Left sied Thumbnail image -->
+    <!-- <com.android.volley.toolbox.NetworkImageView -->
+    <!-- <ImageView -->
+	<ImageView    
+        android:id="@+id/thumbnail"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="8dp"/>
+ 
+    <!-- Type card-->
+    <TextView
+        android:id="@+id/person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+    
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/card_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="@dimen/card_type" />
+ 
+ 
+    <!-- Connections -->
+    <TextView
+        android:id="@+id/connect_p"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_type"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="@color/connect_p"
+        android:textSize="@dimen/connect_p"
+      />
+    
+    <LinearLayout android:id="@+id/link_icons1"
+    	android:layout_width="match_parent"
+    	android:layout_height="25dp"
+    	android:layout_marginTop="0dip"
+		android:layout_below="@id/connect_p"
+		android:layout_toRightOf="@+id/thumbnail"
+    	android:orientation="horizontal" 
+    	android:paddingLeft="0dp"
+    	android:paddingRight="150dp">
+	    
+    	<ImageView
+	        android:id="@+id/image_icon1" 
+        	android:layout_width="0dp"
+	        android:layout_weight="0.2"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/ic_twitter"
+        	android:layout_alignParentLeft="true" />
+		    
+		<ImageView 
+		    android:id="@+id/image_icon2"
+		    android:layout_width="0dp"
+	        android:layout_weight="0.2"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/ic_whatsapp"
+		    android:layout_toRightOf="@id/image_icon1" />
+		    
+	    <ImageView
+	        android:id="@+id/image_icon3"
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_linkedin"
+	        android:layout_toRightOf="@id/image_icon2"
+	        android:layout_centerVertical="true"/>
+		    
+	    <ImageView
+	        android:id="@+id/image_icon4" 
+	        android:layout_width="0dp"
+	        android:layout_weight="0.2"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_googleplus"
+	        android:layout_toRightOf="@id/image_icon3"
+	        android:layout_centerVertical="true"/>
+	    
+	  </LinearLayout>
+    
+ 
+    <!-- Rightend Duration -->
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/year"
+        android:textSize="@dimen/year"/>
+    
+ 
+     <!-- Rightend Arrow -->
+     <ImageView
+        android:id="@+id/im_expand" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_expand"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+     
+     <!-- Rightend Arrow -->
+     <ImageView
+        android:id="@+id/im_share" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_sharehl"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_alignParentRight="true" />
+ 
+</RelativeLayout><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/layout/tab1_list_row.xml -->

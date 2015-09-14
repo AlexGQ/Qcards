@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+ 
+<color name="gray_dialog">#E3E3E3</color>
+<color name="white_dialog">#F5F5F5</color>
+<color name="counter_text_bg">#FFFFFF</color>
+
+ <color name="background_tab_pressed">#6633B5E5</color>
+ <color name="actionbar_title_color">@android:color/white</color>
+ 
+ <color name="connect_p">#666666</color>
+ <color name="year">#888888</color>
+ <color name="list_divider">#d9d9d9</color>
+ <color name="list_row_start_color">#ffffff</color>
+ <color name="list_row_end_color">#ffffff</color>
+ <color name="list_row_hover_start_color">#ebeef0</color>
+ <color name="list_row_hover_end_color">#ebeef0</color>
+ <color name="nav_drawer">#F5F5F5</color>
+    
+</resources>

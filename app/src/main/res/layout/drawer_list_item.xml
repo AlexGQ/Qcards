@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/list_selector_drawer">
+    
+    
+    
+ <LinearLayout android:id="@+id/thumbnail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/image_bg">
+ 
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/ic_action_discard"/>
+ 
+    </LinearLayout>
+ 
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/thumbnail1"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:textSize="@dimen/item_drawer"
+        android:paddingRight="40dp"/>
+    
+    
+     
+    <TextView android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/counter_drawer"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:textColor="#000000"/>
+ 
+</RelativeLayout>

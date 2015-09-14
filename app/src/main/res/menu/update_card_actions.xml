@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- Beam -->
+   
+    <item
+      android:id="@+id/action_beam"
+      android:orderInCategory="100"
+      android:icon="@drawable/ic_action_send_now"
+      android:title="@string/action_beam"
+      android:showAsAction="always"/>
+    
+    <!-- Shake -->
+   
+    <item
+      android:id="@+id/action_shake"
+      android:orderInCategory="100"
+      android:icon="@drawable/ic_action_alarms"
+      android:title="@string/action_shake"
+      android:showAsAction="always"/>
+    
+    
+   <!-- Share card -->
+   
+    <item
+      android:id="@+id/action_share"
+      android:orderInCategory="100"
+      android:icon="@drawable/ic_action_share"
+      android:title="@string/action_share"
+      android:showAsAction="always"/>
+    
+    <!-- Edit card -->
+   <item
+      android:id="@+id/action_edit"
+      android:orderInCategory="100"
+      android:icon="@drawable/ic_action_edit"
+      android:showAsAction="always"
+      android:title="@string/action_edit"/>
+   
+    <!-- Delete card -->
+   <item
+      android:id="@+id/action_delete"
+      android:orderInCategory="100"
+      android:icon="@drawable/ic_action_discard"
+      android:title="@string/action_delete"
+      android:showAsAction="always"/>
+    
+</menu>    
+
+

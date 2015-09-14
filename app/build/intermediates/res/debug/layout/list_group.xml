@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayheadergroups"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dip" 
+    android:background="#F0F0F0">
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textSize="17dp"
+        android:textColor="#000012" />
+    
+    <ImageView
+        android:id="@+id/group_options" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_expand"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    
+ 
+</RelativeLayout><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/layout/list_group.xml -->

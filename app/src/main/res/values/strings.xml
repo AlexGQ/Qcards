@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     
+    <string name="add_photo">Add a photo</string>
+     
+    <string name="no_network_connection_toast">No network connection found</string>
+    
+    
+    <string name="button_pphoto">Profile photo</string>
+    <string name="button_language">Language</string>
+    <string name="button_about">About </string>
+    <string name="prefs_summ_button_about">About Qcards</string>
+    
+    
+    <string name="button_email">Email </string>
+    <string name="prefs_summ_button_email">None</string>
+    
+    <string name="button_activate_full">Activate</string>
+    
+    <string name="set_pphoto">Set profile photo</string>
+	
+	<string-array name="settings_push_hupload_human_value">
+    <item>Wi-Fi only</item>
+    <item>Wi-Fi or data plan</item>
+	</string-array>
+	
+	<string-array
+	    name="settings_push_hupload_phone_value">
+	    <item>0</item>
+	    <item>1</item>
+	</string-array>
+    
+    <string name="settings_push_language">Select a language</string>
+    
+    
+    <string-array name="settings_push_language_human_value">
+    <item>English</item>
+    <item>Spanish</item>
+    <item>Catalan</item>
+    <item>Chinese</item>
+	</string-array>
+	
+	<string-array
+	    name="settings_push_language_phone_value">
+	    <item>0</item>
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	</string-array>
+    
+    
+    <string name="app_name">Qcards</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_check_updates">Check updates</string>
+    <string name="action_search">Search</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_help">Help</string>
+    <string name="activity_location_found">Location found</string>
+    <string name="action_location_found">Location found</string>
+    <string name="search_hint">search hint</string>
+    <string name="action_send">Send</string>
+    <string name="action_sortby">Sort by</string>
+    <string name="action_save">Save</string>
+    <string name="action_group">Group cards</string>
+    <string name="action_new">New</string>
+    <string name="action_accept">Accept</string>
+    <string name="action_share">Share</string>
+    <string name="action_shake">Shake</string>
+    <string name="action_beam">Beam</string>
+    <string name="action_person">Sign in</string>
+    <string name="activity_nfc">NFC</string>
+    <string name="activity_share">Share</string>
+    <string name="title_activity_list">Sign in</string>
+    <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: Lorem
+        Ipsum</string>
+    
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_finish">Finish</string>
+    
+    <string name="Add_New">Add new</string>
+   <string name="action_edit">Edit</string>
+   <string name="action_delete">Delete</string>
+   <string name="title_activity_display_contact">DisplayContact</string>
+   <string name="title_activity_new_contact">NewContact</string>
+   <string name="title_activity_display_cards">DisplayCards</string>
+   <string name="title_activity_display_card">DisplayCard</string>
+   <string name="title_activity_edit_card">EditCard</string>
+   
+   <string name="create_new_group">Create new group</string>
+   <string name="text_new_group">New group</string>
+   
+   <string name="button_help">Help</string>
+   <string name="button_account">Account</string>
+   <string name="button_notifications">Notifications</string>
+   <string name="button_to_upload">How to upload</string>
+   
+   <string name="button_app_version">App version</string>
+   <string name="button_legacy"> Legal &amp; privacy</string>
+   
+   <string name="pref_account_title">Account</string>
+   <string name="pref_button_email">Email</string>
+   
+   
+   
+   <string name="pref_general_title"> General settings </string>
+   <string name="pref_cards_upload_title"> Cards upload / download </string>
+   
+   
+   <string name="prefs_summ_button_toupload">Wi-Fi only</string>
+   <string name="prefs_summ_button_language">English</string>
+   <string name="prefs_summ_button_photo">Add your profile photo</string>
+   
+   
+   
+   
+   
+   
+   <string name="action_import_cards">Import cards</string>
+   
+   
+   <string name="name">Name</string>
+   <string name="phone">Phone</string>
+   <string name="email">Email</string>
+   <string name="street">Street</string>
+   <string name="country">City/State/Zip</string>
+   <string name="ContactId">Contact ID</string>
+   <string name="ImageId">Image ID</string>
+   
+   <string name="save">Save Contact</string>
+
+   <string name="are_you_sure_delete_card">Are you sure, you want to delete the card(s) selected.</string>
+   <string name="dont_group_cards">Are you sure, you do not want to group any card.</string>
+   <string name="are_you_sure_delete_group">Are you sure, you want to delete the group(s) selected.</string>
+   <string name="delete_groups">Delete group(s)</string>
+   <string name="select_all_groups">Select all groups</string>
+   
+   <string name="yes">Yes</string>
+   <string name="no">No</string>
+   <string name="cancel">Cancel</string>
+   <string name="ok">Ok</string>
+   
+   <string name="add_to_group">Add to group</string>
+   <string name="rename_group">Rename group</string>
+   <string name="delete_success">Deleted successfully</string>
+   <string name="groups_deleted">group(s) deleted</string>
+   
+   <string name="sort_by">Sort by</string>
+   
+   
+   
+   <string name="delete_cards">Delete card(s)</string>
+   <string name="cards_selected">card(s) selected</string>
+   <string name="groups_selected">group(s) selected</string>
+   
+   
+   <string name="text_edit">Edit</string>   
+   <string name="text_add">Add</string>
+   <string name="text_share">Share</string>
+   <string name="text_delete">Delete</string>
+   <string name="text_group">Group</string>
+   
+   <string name="text_share_card_to">Share card(s) to..</string>
+   <string name="text_share_group_to">Share group to..</string>
+   <string name="text_share_group">Share group</string>
+   
+   <string name="text_group_exist">Group XXX already exists</string>
+   <string name="text_do_the_same">Do the same</string>
+
+   
+    <string-array name="drawer_array">
+        <item>Sign in</item>
+        <item>Invite friends</item>
+        <item>Go premium</item>
+        <item>Settings</item>
+        <item>Help &amp; feedback</item>
+    </string-array>
+    
+    <string-array name="tabTitles">
+        <item>All cards</item>
+        <item>Groups</item>
+    </string-array>
+    
+    <string-array name="sort_by_opt">
+        <item>Name</item>
+        <item>Date modified</item>
+    </string-array>
+    
+    <string-array name="repeat_group_opt">
+        <item>Combine group</item>
+        <item>Rename group</item>
+    </string-array>
+    
+    
+     <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_person</item>
+        <item>@drawable/ic_action_add_person</item>
+        <item>@drawable/ic_action_favorite</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_help</item>
+    </array>
+    
+    
+    <string-array name="load_photo_opt">
+        <item>Take photo</item>
+        <item>Choose photo</item>
+        <item>Default photo</item>
+    </string-array>
+         
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+   
+   
+   <string name="pfifi"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
+    <string name="about_app">About qcards</string>
+   <string name="description_about">Copyright &#169; 2014-20XX all rights reserved. \n\n 
+       			  Qcards <a href="http://www.google.com">Website</a> , <a href="mailto:qcards@gmail.com">Email</a>. \n\n
+                  Qcards on <a href="http://www.facebook.com">Facebook</a> , <a href="http://www.twitter.com">Twitter</a>. \n\n 
+                  Rate us on the <a href="http://play.google.com/">Play Store</a>. \n\n </string>
+   
+   <style name="Animations" />
+
+	<!-- PopDownMenu -->
+	<style name="Animations.PopDownMenu" />
+	
+	<style name="Animations.PopDownMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+	
+	<!-- PopUpMenu -->
+	<style name="Animations.PopUpMenu" />
+	
+	<style name="Animations.PopUpMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+
+    <!-- Sign_in_item -->
+    
+    <string name="input_loggin">Submit</string>
+    <string name="main_title">Sign up</string>
+    <string name="main_title2">Login</string>
+    <string name="input_name">Name</string>
+    <string name="input_lastName">Last Name</string>
+    <string name="input_email">Email</string>
+    <string name="input_password">Password</string>
+    <string name="input_save">Create</string>
+    <string name="input_showList">Show List</string>
+    <string name="input_showSignIn">Sign in</string>
+    <string name="input_showLoggin">Loggin</string>
+    <!-- display_users_list -->
+    <string name="title_activity_listado">Cards List</string>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

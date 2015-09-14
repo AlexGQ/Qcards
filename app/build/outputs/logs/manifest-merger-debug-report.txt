@@ -1,0 +1,338 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		ADDED from AndroidManifest.xml:5:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:4:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-sdk
+ADDED from AndroidManifest.xml:7:5
+MERGED from com.android.support:appcompat-v7:22.2.1:20:5
+MERGED from com.android.support:support-v4:22.2.1:20:5
+MERGED from Qcards.library:library:unspecified:7:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:9:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.NFC
+ADDED from AndroidManifest.xml:11:5
+	android:name
+		ADDED from AndroidManifest.xml:11:22
+uses-feature#android.hardware.nfc
+ADDED from AndroidManifest.xml:12:5
+	android:required
+		ADDED from AndroidManifest.xml:12:55
+	android:name
+		ADDED from AndroidManifest.xml:12:19
+uses-feature#android.hardware.camera
+ADDED from AndroidManifest.xml:14:5
+	android:name
+		ADDED from AndroidManifest.xml:14:19
+uses-permission#android.permission.CAMERA
+ADDED from AndroidManifest.xml:15:5
+	android:name
+		ADDED from AndroidManifest.xml:15:22
+uses-feature#android.hardware.camera.autofocus
+ADDED from AndroidManifest.xml:16:5
+	android:name
+		ADDED from AndroidManifest.xml:16:19
+application
+ADDED from AndroidManifest.xml:19:5
+MERGED from com.android.support:appcompat-v7:22.2.1:22:5
+MERGED from com.android.support:support-v4:22.2.1:22:5
+	android:label
+		ADDED from AndroidManifest.xml:22:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:20:9
+	android:icon
+		ADDED from AndroidManifest.xml:21:9
+	android:theme
+		ADDED from AndroidManifest.xml:24:9
+	android:name
+		ADDED from AndroidManifest.xml:23:9
+provider#android.support.v4.content.FileProvider
+ADDED from AndroidManifest.xml:26:9
+	android:grantUriPermissions
+		ADDED from AndroidManifest.xml:29:13
+	android:exported
+		ADDED from AndroidManifest.xml:30:13
+	android:authorities
+		ADDED from AndroidManifest.xml:28:13
+	android:name
+		ADDED from AndroidManifest.xml:27:13
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from AndroidManifest.xml:31:13
+	android:resource
+		ADDED from AndroidManifest.xml:33:17
+	android:name
+		ADDED from AndroidManifest.xml:32:17
+activity#com.example.qcards.sharecards.FileSelectActivity
+ADDED from AndroidManifest.xml:36:10
+	android:label
+		ADDED from AndroidManifest.xml:38:17
+	android:name
+		ADDED from AndroidManifest.xml:37:17
+intent-filter#android.intent.action.PICK+android.intent.category.DEFAULT+android.intent.category.OPENABLE
+ADDED from AndroidManifest.xml:39:17
+action#android.intent.action.PICK
+ADDED from AndroidManifest.xml:40:21
+	android:name
+		ADDED from AndroidManifest.xml:41:25
+category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:42:21
+	android:name
+		ADDED from AndroidManifest.xml:43:25
+category#android.intent.category.OPENABLE
+ADDED from AndroidManifest.xml:44:21
+	android:name
+		ADDED from AndroidManifest.xml:45:25
+data
+ADDED from AndroidManifest.xml:46:21
+	android:mimeType
+		ADDED from AndroidManifest.xml:46:27
+activity#com.example.qcards.receivecards.GetCardsNFC
+ADDED from AndroidManifest.xml:51:14
+	android:label
+		ADDED from AndroidManifest.xml:53:17
+	android:name
+		ADDED from AndroidManifest.xml:52:17
+intent-filter#android.intent.category.DEFAULT+android.nfc.action.NDEF_DISCOVERED
+ADDED from AndroidManifest.xml:54:5
+action#android.nfc.action.NDEF_DISCOVERED
+ADDED from AndroidManifest.xml:55:8
+	android:name
+		ADDED from AndroidManifest.xml:55:16
+activity#com.flavienlaurent.notboringactionbar.ShowCardActivity
+ADDED from AndroidManifest.xml:61:14
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:63:13
+	android:name
+		ADDED from AndroidManifest.xml:61:24
+	android:launchMode
+		ADDED from AndroidManifest.xml:62:7
+activity#com.example.qcards.displayingbitmapscards.ImageDetailActivity
+ADDED from AndroidManifest.xml:65:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:66:7
+	android:name
+		ADDED from AndroidManifest.xml:65:23
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:67:13
+	android:name
+		ADDED from AndroidManifest.xml:67:24
+	android:value
+		ADDED from AndroidManifest.xml:68:17
+activity#com.example.qcards.cardlayouts.MyAvatarActivity
+ADDED from AndroidManifest.xml:73:14
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:75:13
+	android:name
+		ADDED from AndroidManifest.xml:73:24
+	android:launchMode
+		ADDED from AndroidManifest.xml:74:7
+activity#com.example.qcards.contactsqlite.EditCardAvatar
+ADDED from AndroidManifest.xml:79:10
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:81:13
+	android:name
+		ADDED from AndroidManifest.xml:79:20
+	android:launchMode
+		ADDED from AndroidManifest.xml:80:7
+activity#com.example.qcards.groups.ActivityGroupCards
+ADDED from AndroidManifest.xml:83:3
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:85:13
+	android:name
+		ADDED from AndroidManifest.xml:83:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:84:13
+activity#com.example.qcards.preferences.SettingsActivity
+ADDED from AndroidManifest.xml:87:12
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:91:13
+	android:label
+		ADDED from AndroidManifest.xml:89:17
+	android:name
+		ADDED from AndroidManifest.xml:88:15
+	android:launchMode
+		ADDED from AndroidManifest.xml:90:9
+activity#com.example.qcards.GetFileCardsActivity
+ADDED from AndroidManifest.xml:94:3
+	android:name
+		ADDED from AndroidManifest.xml:94:13
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:95:7
+action#android.intent.action.VIEW
+ADDED from AndroidManifest.xml:96:11
+	android:name
+		ADDED from AndroidManifest.xml:96:19
+category#android.intent.category.BROWSABLE
+ADDED from AndroidManifest.xml:98:11
+	android:name
+		ADDED from AndroidManifest.xml:98:21
+activity#com.example.qcards.MainActivity
+ADDED from AndroidManifest.xml:135:9
+	android:label
+		ADDED from AndroidManifest.xml:137:13
+	android:uiOptions
+		ADDED from AndroidManifest.xml:138:13
+	android:name
+		ADDED from AndroidManifest.xml:136:13
+meta-data#android.app.default_searchable
+ADDED from AndroidManifest.xml:139:13
+	android:name
+		ADDED from AndroidManifest.xml:140:17
+	android:value
+		ADDED from AndroidManifest.xml:141:17
+meta-data#android.support.UI_OPTIONS
+ADDED from AndroidManifest.xml:144:7
+	android:name
+		ADDED from AndroidManifest.xml:144:18
+	android:value
+		ADDED from AndroidManifest.xml:145:14
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:147:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:148:17
+	android:name
+		ADDED from AndroidManifest.xml:148:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:149:17
+	android:name
+		ADDED from AndroidManifest.xml:149:27
+activity#com.example.qcards.SearchResultsActivity
+ADDED from AndroidManifest.xml:155:9
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:156:13
+	android:name
+		ADDED from AndroidManifest.xml:155:19
+intent-filter#android.intent.action.SEARCH
+ADDED from AndroidManifest.xml:157:13
+action#android.intent.action.SEARCH
+ADDED from AndroidManifest.xml:158:17
+	android:name
+		ADDED from AndroidManifest.xml:158:25
+meta-data#android.app.searchable
+ADDED from AndroidManifest.xml:160:13
+	android:resource
+		ADDED from AndroidManifest.xml:162:17
+	android:name
+		ADDED from AndroidManifest.xml:161:17
+activity#com.example.qcards.contactsqlite.NewContactActivity
+ADDED from AndroidManifest.xml:170:9
+	android:label
+		ADDED from AndroidManifest.xml:173:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:174:13
+	android:name
+		ADDED from AndroidManifest.xml:171:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:172:7
+activity#com.example.qcards.contactsqlite.DisplayContactActivity
+ADDED from AndroidManifest.xml:183:9
+	android:label
+		ADDED from AndroidManifest.xml:186:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:187:13
+	android:name
+		ADDED from AndroidManifest.xml:184:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:185:7
+activity#com.example.qcards.contactsqlite.DisplayCardActivity
+ADDED from AndroidManifest.xml:195:9
+	android:label
+		ADDED from AndroidManifest.xml:198:13
+	android:uiOptions
+		ADDED from AndroidManifest.xml:200:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:199:13
+	android:name
+		ADDED from AndroidManifest.xml:196:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:197:7
+activity#com.example.qcards.hviewcards.DisplayCardsLayouts
+ADDED from AndroidManifest.xml:208:9
+	android:label
+		ADDED from AndroidManifest.xml:211:13
+	android:uiOptions
+		ADDED from AndroidManifest.xml:213:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:212:13
+	android:name
+		ADDED from AndroidManifest.xml:209:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:210:7
+activity#com.example.qcards.contactsqlite.EditCardActivity
+ADDED from AndroidManifest.xml:221:9
+	android:label
+		ADDED from AndroidManifest.xml:224:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:225:13
+	android:name
+		ADDED from AndroidManifest.xml:222:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:223:7
+activity#com.example.qcards.signin.SignInActivity
+ADDED from AndroidManifest.xml:234:9
+	android:label
+		ADDED from AndroidManifest.xml:237:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:238:13
+	android:name
+		ADDED from AndroidManifest.xml:235:7
+	android:launchMode
+		ADDED from AndroidManifest.xml:236:7
+activity#com.example.qcards.signin.DisplayUsersList
+ADDED from AndroidManifest.xml:246:3
+	android:label
+		ADDED from AndroidManifest.xml:248:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:249:13
+	android:name
+		ADDED from AndroidManifest.xml:246:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:247:11
+activity#com.example.qcards.LocationFound
+ADDED from AndroidManifest.xml:258:9
+	android:label
+		ADDED from AndroidManifest.xml:260:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:261:13
+	android:name
+		ADDED from AndroidManifest.xml:259:13
+activity#com.example.qcards.sharecards.NfcActivity
+ADDED from AndroidManifest.xml:268:9
+	android:label
+		ADDED from AndroidManifest.xml:270:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:271:13
+	android:name
+		ADDED from AndroidManifest.xml:269:13
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:278:5
+	android:name
+		ADDED from AndroidManifest.xml:278:22
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:279:5
+	android:name
+		ADDED from AndroidManifest.xml:279:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:280:5
+	android:name
+		ADDED from AndroidManifest.xml:280:22
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:281:6
+	android:name
+		ADDED from AndroidManifest.xml:281:23

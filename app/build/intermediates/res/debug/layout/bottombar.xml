@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttonbar"
+    style="@android:style/ButtonBar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:background="#222222"
+    android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/BtnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#222222"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_accept"
+            android:drawableTop="@drawable/ic_action_accept"
+            android:textSize="13dip"
+            android:textColor="#FFFFFF" />
+        
+
+        <Button
+            android:onClick="BtnSignInOnClick"
+            android:id="@+id/BtnPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#222222"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_person"
+            android:drawableTop="@drawable/ic_action_person"
+            android:textSize="13dip"
+            android:textColor="#FFFFFF" />
+        
+        <Button
+            android:id="@+id/BtnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#222222"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_share"
+            android:drawableTop="@drawable/ic_action_share"
+            android:textSize="13dip"
+            android:textColor="#FFFFFF" />
+        
+        <Button
+            android:id="@+id/BtnSendNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#222222"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_send"
+            android:drawableTop="@drawable/ic_action_send_now"
+            android:textSize="13dip"
+            android:textColor="#FFFFFF" />
+        
+
+        <Button
+            android:id="@+id/BtnNew"
+            android:onClick="BtnNewOnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#222222"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_new"
+            android:drawableTop="@drawable/ic_action_new"
+            android:textSize="13dip"
+            android:textColor="#FFFFFF" />
+        
+
+</LinearLayout><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/layout/bottombar.xml -->

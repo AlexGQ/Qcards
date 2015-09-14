@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+  <View
+       android:id="@+id/SplitLined5"
+       android:layout_width="match_parent"
+       android:layout_height= "0.5dp"
+       android:layout_marginTop="0dip"
+       android:background="#E3E3E3" />  
+    
+ <ListView
+    	android:id="@+id/checkbox_delete_all"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" >
+ </ListView>
+ 
+ <View
+       android:id="@+id/SplitLined6"
+       android:layout_width="match_parent"
+       android:layout_height= "0.5dp"
+       android:layout_marginTop="0dip"
+       android:background="#E3E3E3" />
+ 
+ <ListView
+    	android:id="@+id/delete_cgroup"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" >
+ </ListView>
+ 
+    
+ 
+
+</LinearLayout><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/layout/dialog_delete_group_list.xml -->

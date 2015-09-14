@@ -1,0 +1,16 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#fff"
+  >
+   
+  <com.example.qcards.hviewcards.HorizontalListView
+  	android:id="@+id/cardslayout"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:background="#ddd"
+  />
+  
+</LinearLayout><!-- From: file:/C:/Users/Alex/Documents/Android%20Projects/Qcards/app/src/main/res/layout/hview_layout_cards.xml -->
