@@ -33,12 +33,25 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static android.support.test.espresso.action.ViewActions.pressBack;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
+import static android.support.test.espresso.action.ViewActions.swipeLeft;
+import static android.support.test.espresso.action.ViewActions.swipeRight;
 import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.contrib.DrawerActions.closeDrawer;
+import static android.support.test.espresso.contrib.DrawerActions.openDrawer;
+import static android.support.test.espresso.contrib.DrawerMatchers.isOpen;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.hamcrest.CoreMatchers.notNullValue;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.anything;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 
@@ -68,6 +81,8 @@ public class BasicInstrumentationTest
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+
+        setActivityInitialTouchMode(true);
 
         // Espresso does not start the Activity for you we need to do this manually here.
         mActivity = getActivity();
@@ -167,34 +182,233 @@ public class BasicInstrumentationTest
 
 
     @Test
-    public void testClickActionBarItem() {
-        // We make sure the contextual action bar is hidden.
-        //onView(withId(R.id.hide_contextual_action_bar))
-          //      .perform(click());
+    public void testClickActionBarItem() throws InterruptedException {
 
-        // Click on the icon - we can find it by the r.Id.
+//--------------------------------------------------------------------------------------------------
+// Sing in
+// -------------------------------------------------------------------------------------------------
+
+        // SigInActivity.java
+        // Click on the Button Sign In
         onView(withId(R.id.button4))
                 .perform(click());
 
-        // Type text and then press the button.
-        onView(withId(R.id.et_name)).perform(typeText("Alex"),
+        // Type text (Name) and close keyboard
+        onView(withId(R.id.et_name)).perform(typeText("Qcards"),
                 closeSoftKeyboard());
 
-        onView(withId(R.id.et_lastName)).perform(typeText("G"),
+        // Type text (Surname) and close keyboard
+        onView(withId(R.id.et_lastName)).perform(typeText("Automated_Test"),
                 closeSoftKeyboard());
 
-        onView(withId(R.id.et_email)).perform(typeText("ag@gmail.com"),
-                closeSoftKeyboard());
-
-        //onView(withId(R.id.et_password)).perform(typeText("hipeople"),scrollTo(),
-          //      closeSoftKeyboard());
+        // Type text (E.mail)
+        onView (withId (R.id.et_email))
+                .check(matches(isDisplayed()))
+                .perform(scrollTo(), typeText("yourqcards@gmail.com")
+                );
+        // Type text (Password) and then press the button.
+        onView(withId(R.id.et_password))
+                .perform(typeText("hello people")
+                );
 
         //onView(withId(is(R.id.button1))).perform(closeSoftKeyboard(),click());
 
-        // Click on a given operation button
-        //onView(withId(R.id.button1)).perform(click());
+        // now, click on sign in.
+        onView(withId(R.id.button1))
+                     .perform(scrollTo(), click());
+
+//--------------------------------------------------------------------------------------------------
+// Create a new Qcard
+// -------------------------------------------------------------------------------------------------
+
+        // DisplayCardsLayouts.java
+        // Swipe to see Qcards
+        onView(withId(R.id.pager)).perform(swipeLeft());
+        onView(withId(R.id.pager)).perform(swipeLeft());
+
+        // Click on the image to select the Qcard
+        onView(allOf(withId(R.id.card_image), isDisplayed())).perform(click());
+
+        // EditCardActivity.java
+        // Type name that will be included in the card
+        onView(withId(R.id.EditTextName)).perform(scrollTo(), typeText("Pancho"));
+        // Type phone number that will be included in the card
+        onView(withId(R.id.EditTextPhone)).perform(scrollTo(), typeText("123"));
+
+        // Click on the action bar button save
+        onView(withId(R.id.action_save))
+                .perform(click());
+
+        // Press back
+        onView(withId(android.R.id.home))
+                .perform(click());
+
+//--------------------------------------------------------------------------------------------------
+// Go to Groups and create a Group for friends
+// -------------------------------------------------------------------------------------------------
+
+        // MainActivity.java
+        // Swipe to see Groups
+        onView(withId(R.id.pager)).perform(swipeLeft());
+
+        Thread.sleep(1000);
+
+        // Click on the action bar button create
+        onView(withId(R.id.action_new))
+                .perform(click());
+
+        // Type group name
+        onView(withId(R.id.txt_your_name)).perform(typeText("Friends"));
+
+        // Click on ok to create the group
+        onView(allOf(withText("Ok")))
+                .perform(click());
+
+        // Open the overflow menu from contextual action mode.
+        //openContextualActionModeOverflowMenu();
+
+        // Click on the card created
+        //onView(allOf(withText("Pancho")))
+          //      .perform(click());
+        //onView(allOf(withText("Pancho")))
+              //.perform(click());
+        //onData(anything()).inAdapterView(withId(R.id.pinnedListViewCab)).atPosition(0).perform(click());
+        //onData(allOf(withText("Pancho"),isFocusable())).inAdapterView(withId(R.id.pinnedListViewCab)).atPosition(0).perform(click());
+        //onData(allOf(withText("Pancho"),isFocusable())).perform(click());
+        //onData(anything()).inAdapterView(allOf(withText("Pancho"), hasFocus())).atPosition(0).perform(click());
+        //onData(allOf(withText("Pancho"))).inAdapterView(withId(R.id.pinnedListViewCab)).perform(click());
+
+        // Click on the action bar button save
+        onView(withId(R.id.action_group))
+                .perform(click());
+
+        Thread.sleep(1000);
+        // Swipe to see cards again
+        onView(withId(R.id.pager)).perform(swipeRight());
+
+//--------------------------------------------------------------------------------------------------
+// Click on a Qcard
+// -------------------------------------------------------------------------------------------------
+
+        // Click on the card created
+        onView(allOf(withText("Pancho")))
+                .perform(click());
+
+//--------------------------------------------------------------------------------------------------
+// Edit Qcard
+// -------------------------------------------------------------------------------------------------
+
+        // Click on the action bar button edit
+        onView(withId(R.id.action_edit))
+                .perform(click());
+
+        // EditCardActivity.java
+        // Type name that will be included in the card
+        onView(withId(R.id.EditTextEmail)).perform(scrollTo(), typeText("pancho@gmail.com"));
+
+        // Click on the action bar button save
+        onView(withId(R.id.action_save))
+                .perform(click());
+
+        // Press back
+        onView(withId(android.R.id.home))
+                .perform(click());
+
+//--------------------------------------------------------------------------------------------------
+// Create a new Qcard
+// -------------------------------------------------------------------------------------------------
+
+        // Click on the action bar button new
+        //onView(allOf(withId(R.id.action_new), isDisplayed())).perform(click());
+        onView(withId(R.id.action_new))
+                .perform(click());
+
+        // DisplayCardsLayouts.java
+        // Swipe to see Qcards
+        onView(withId(R.id.pager)).perform(swipeLeft());
+        onView(withId(R.id.pager)).perform(swipeLeft());
+
+        // Click on the image to select the Qcard
+        onView(allOf(withId(R.id.card_image), isDisplayed())).perform(click());
+
+        // EditCardActivity.java
+        // Type name that will be included in the card
+        onView(withId(R.id.EditTextName)).perform(scrollTo(), typeText("Lancelot"));
+        // Type phone number that will be included in the card
+        onView(withId(R.id.EditTextPhone)).perform(scrollTo(), typeText("321"));
+
+        // Click on the action bar button save
+        onView(withId(R.id.action_save))
+                .perform(click());
+
+        // Press back
+        onView(withId(android.R.id.home))
+                .perform(click());
+
+//--------------------------------------------------------------------------------------------------
+// Sort by Date
+// -------------------------------------------------------------------------------------------------
+
+        Thread.sleep(1000);
+        // Click on the action bar button sort by
+        //onView(allOf(withId(R.id.action_new), isDisplayed())).perform(click());
+
+        //onView(withContentDescription("Sort by"))
+              //.perform(click());
+
+        //openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
+        onView(withId(R.id.action_sortby))
+              .perform(click());
+
+        //onView(allOf(withId(R.id.action_sortby)))
+          //      .perform(click());
+
+        onView(allOf(withText("Date modified")))
+                .perform(click());
+
+        onView(allOf(withText("Yes")))
+                .perform(click());
+
+        Thread.sleep(1000);
+
+//--------------------------------------------------------------------------------------------------
+// Navigation Drawer
+// -------------------------------------------------------------------------------------------------
+
+        openDrawer(R.id.drawer_layout);
+
+        onData(anything()).inAdapterView(withId(R.id.left_drawer)).atPosition(3).perform(click());
+
+        Thread.sleep(1000);
+        pressBack();
+        // Press back
+        //onView(withId(android.R.id.home))
+          //      .perform(click());
+
+        //closeDrawer(R.id.drawer_layout);
+        Thread.sleep(2000);
+        openDrawer(R.id.drawer_layout);
+        closeDrawer(R.id.drawer_layout);
+        onView(withId(R.id.drawer_layout)).check(matches(isOpen()));
 
 
+        Thread.sleep(5000);
+
+
+
+
+
+        //onData(anything()).inAdapterView(withId(R.id.list_view)).atPosition(0).perform(click());
+        /**
+         * Test opening the Navigation Drawer and pressing the back button.
+         * Espresso: openDrawer, pressBack
+         */
+
+        //Espresso.pressBack();
+        //openDrawer(R.id.drawer_layout);
+        //pressBack();
+
+        //onView(isRoot()).perform(waitAtLeast(2000));
 
 
 
@@ -202,6 +416,8 @@ public class BasicInstrumentationTest
         //onView(withId(R.id.text_action_bar_result))
           //      .check(matches(withText("Save")));
     }
+
+
     /*@Test
     public void testChangeText_newActivity() {
 

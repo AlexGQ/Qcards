@@ -14,7 +14,7 @@
     <item android:id="@+id/action_new"
           android:icon="@drawable/ic_action_new"
           android:title="@string/action_new"
-          app:showAsAction="always" />
+          android:showAsAction="always" />
     
        <!-- Share card -->
    
@@ -23,14 +23,14 @@
       android:orderInCategory="100"
       android:icon="@drawable/ic_action_share"
       android:title="@string/action_share"
-        app:showAsAction="ifRoom"/>
+      android:showAsAction="ifRoom"/>
     
     
     <!-- Delete groups -->
     <item android:id="@+id/action_delete_groups"
           android:icon="@drawable/ic_action_discard"
           android:title="@string/delete_groups"
-          app:showAsAction="ifRoom" />
+          android:showAsAction="ifRoom" />
     
     
     
@@ -44,7 +44,7 @@
     <item android:id="@+id/action_location_found"
           android:icon="@drawable/ic_action_location_found"
           android:title="@string/action_location_found"
-          app:showAsAction="never" />
+          android:showAsAction="never" />
     
          
     <!-- Help -->
@@ -58,18 +58,18 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:showAsAction="never"/>
     
     <!-- import cards -->
     <item android:id="@+id/action_import_cards"
           android:title="@string/action_import_cards"
-        app:showAsAction="never" />
+          android:showAsAction="never" />
     
     <!-- Sort by -->
     <item android:id="@+id/action_sortby"
           android:icon="@drawable/ic_action_sort_by_size"
           android:title="@string/action_sortby"
-         app:showAsAction="never"/>
+          android:showAsAction="always"/>
 </menu>
 
     

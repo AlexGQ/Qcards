@@ -2,10 +2,6 @@
 package com.example.qcards.groups;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
-import za.co.immedia.pinnedheaderlistview.PinnedHeaderListView;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -28,11 +24,16 @@ import com.example.qcards.R;
 import com.example.qcards.UtilsListView;
 import com.example.qcards.contactsqlite.Contact;
 import com.example.qcards.contactsqlite.DatabaseHandler;
-import com.example.qcards.dialogs.SortByDialog;
 import com.example.qcards.dialogs.GenericDialog.GenericDialogListener;
+import com.example.qcards.dialogs.SortByDialog;
 import com.example.qcards.listview.SectionedAdapter;
 import com.example.qcards.quickactionbar.QuickAction;
 import com.example.qcards.tabpanel.Tab1Activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import za.co.immedia.pinnedheaderlistview.PinnedHeaderListView;
  
 
 //public class ActivityGroupCards extends FragmentActivity implements GenericDialogListener{
@@ -73,7 +74,7 @@ public class ActivityGroupCards extends Fragment implements GenericDialogListene
     	//setHasOptionsMenu(true);
     	
         fa = super.getActivity();
-     	ll = (LinearLayout) inflater.inflate(R.layout.tab1_list, container, false);
+     	ll = (LinearLayout) inflater.inflate(R.layout.tab1_listcab, container, false);
      	mcontainer = container;
 
      	mContext = getActivity().getApplicationContext();
@@ -118,7 +119,7 @@ public class ActivityGroupCards extends Fragment implements GenericDialogListene
         NLetters = Tab1Activity.NLetters;
         contactList = Tab1Activity.contactList;
     
-        list = (PinnedHeaderListView) ll.findViewById(R.id.pinnedListView);
+        list = (PinnedHeaderListView) ll.findViewById(R.id.pinnedListViewCab);
 
         final QuickAction mQuickAction 	= new QuickAction(mContext);
         
