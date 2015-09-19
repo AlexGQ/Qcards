@@ -43,9 +43,8 @@ import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.swipeRight;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.contrib.DrawerActions.closeDrawer;
 import static android.support.test.espresso.contrib.DrawerActions.openDrawer;
-import static android.support.test.espresso.contrib.DrawerMatchers.isOpen;
+import static android.support.test.espresso.matcher.ViewMatchers.hasSibling;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
@@ -277,6 +276,7 @@ public class BasicInstrumentationTest
         //onData(allOf(withText("Pancho"),isFocusable())).perform(click());
         //onData(anything()).inAdapterView(allOf(withText("Pancho"), hasFocus())).atPosition(0).perform(click());
         //onData(allOf(withText("Pancho"))).inAdapterView(withId(R.id.pinnedListViewCab)).perform(click());
+        Thread.sleep(1000);
 
         // Click on the action bar button save
         onView(withId(R.id.action_group))
@@ -372,6 +372,57 @@ public class BasicInstrumentationTest
         Thread.sleep(1000);
 
 //--------------------------------------------------------------------------------------------------
+// Create a Group and include a Qcard
+// -------------------------------------------------------------------------------------------------
+
+        onView(allOf(withId(R.id.im_expand), hasSibling(withText("Pancho"))))
+                .perform(click());
+
+        onView(allOf(withText("Group")))
+                .perform(click());
+
+        onView(allOf(withText("Create new group")))
+                .perform(click());
+
+        // Type group name
+        onView(withId(R.id.txt_your_name)).perform(typeText("My Qcards"));
+
+        // Click on ok to create the group
+        onView(allOf(withText("Ok")))
+                .perform(click());
+
+        Thread.sleep(1000);
+
+        onView(allOf(withText("My Qcards")))
+                .perform(click());
+
+        onView(allOf(withText("Ok")))
+                .perform(click());
+
+        // MainActivity.java
+        // Swipe to see Groups
+        onView(withId(R.id.pager)).perform(swipeLeft());
+
+        Thread.sleep(1000);
+
+        onView(allOf(withText("My Qcards")))
+                .perform(click());
+
+        Thread.sleep(1000);
+
+        onView(allOf(withText("My Qcards")))
+                .perform(click());
+
+        // MainActivity.java
+        // Swipe to see Groups
+        onView(withId(R.id.pager)).perform(swipeRight());
+
+        //onView(allOf(withId(R.id.im_expand), hasSibling(withText("Pancho"))))
+          //      .perform(click());
+
+        //R.id.iv_icon
+
+//--------------------------------------------------------------------------------------------------
 // Navigation Drawer
 // -------------------------------------------------------------------------------------------------
 
@@ -387,12 +438,12 @@ public class BasicInstrumentationTest
 
         //closeDrawer(R.id.drawer_layout);
         Thread.sleep(2000);
-        openDrawer(R.id.drawer_layout);
+        /*openDrawer(R.id.drawer_layout);
         closeDrawer(R.id.drawer_layout);
         onView(withId(R.id.drawer_layout)).check(matches(isOpen()));
+*/
 
-
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
 
 
 

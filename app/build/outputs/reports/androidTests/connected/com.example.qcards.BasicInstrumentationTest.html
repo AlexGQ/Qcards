@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">30.232s</div>
+<div class="counter">38.068s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,219 +54,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testClickActionBarItem"></a>
-<h3 class="failures">testClickActionBarItem</h3>
-<span class="code">
-<pre>android.support.test.espresso.NoMatchingViewException: No views in hierarchy found matching: with id: com.example.qcards:id/drawer_layout
-If the target view is not part of the view hierarchy, you may need to use Espresso.onData to load it from one of the following AdapterViews:android.widget.ListView{381fd4f4 VFED.VC. .F...... 0,0-1080,1557 #102000a android:id/list}
-
-View Hierarchy:
-+&gt;DecorView{id=-1, visibility=VISIBLE, width=1080, height=1776, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
-|
-+-&gt;ActionBarOverlayLayout{id=16909176, res-name=decor_content_parent, visibility=VISIBLE, width=1080, height=1776, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
-|
-+--&gt;FrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=1557, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=219.0, child-count=1}
-|
-+---&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=1557, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
-|
-+----&gt;ListView{id=16908298, res-name=list, visibility=VISIBLE, width=1080, height=1557, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=true, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=10}
-|
-+-----&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=984, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=0.0, text=Account, input-type=0, ime-target=false, has-links=false}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=204, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=98.0, child-count=3}
-|
-+------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=912, height=168, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=18.0, child-count=3}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=306, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Profile photo, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=VISIBLE, width=412, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=73.0, text=Add your profile photo, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;ImageView{id=2131427448, res-name=avatar, visibility=VISIBLE, width=168, height=168, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=720.0, y=0.0}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=VISIBLE, width=0, height=204, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=954.0, y=0.0, child-count=0}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=304.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=166, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=13.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=133, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=Email, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=VISIBLE, width=473, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=91.0, text=mauri@appliscience.com, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+-----&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=984, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=498.0, text=Cards upload / download, input-type=0, ime-target=false, has-links=false}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=596.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=166, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=13.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=348, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=How to upload, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=VISIBLE, width=179, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=91.0, text=Wi-Fi only, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=790.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=109, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=41.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=111, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=Help, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+-----&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=984, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=984.0, text=General settings, input-type=0, ime-target=false, has-links=false}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=1082.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=166, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=13.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=144, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=About, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=VISIBLE, width=256, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=91.0, text=About Qcards, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=1276.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=109, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=41.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=196, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=Activate, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=984, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=48.0, y=1470.0, child-count=3}
-|
-+------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=192, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=0.0, child-count=1}
-|
-+-------&gt;ImageView{id=16908294, res-name=icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;RelativeLayout{id=-1, visibility=VISIBLE, width=930, height=166, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=13.0, child-count=2}
-|
-+-------&gt;TextView{id=16908310, res-name=title, visibility=VISIBLE, width=236, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=18.0, text=Language, input-type=0, ime-target=false, has-links=false}
-|
-+-------&gt;TextView{id=16908304, res-name=summary, visibility=VISIBLE, width=136, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=91.0, text=English, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+----&gt;TextView{id=16908292, res-name=empty, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
-|
-+----&gt;RelativeLayout{id=16909146, res-name=button_bar, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
-|
-+-----&gt;Button{id=16909147, res-name=back_button, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Back, input-type=0, ime-target=false, has-links=false}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
-|
-+------&gt;Button{id=16909148, res-name=skip_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Skip, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;Button{id=16909149, res-name=next_button, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Next, input-type=0, ime-target=false, has-links=false}
-|
-+--&gt;ActionBarContainer{id=16909177, res-name=action_bar_container, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, child-count=2}
-|
-+---&gt;ActionBarView{id=16909178, res-name=action_bar, visibility=VISIBLE, width=1080, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
-|
-+----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=314, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=false, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=25.0, y=0.0, child-count=2}
-|
-+-----&gt;HomeView{id=-1, visibility=VISIBLE, width=120, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
-|
-+------&gt;ImageView{id=16908347, res-name=up, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
-|
-+------&gt;ImageView{id=16908332, res-name=home, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=12.0, y=24.0}
-|
-+-----&gt;LinearLayout{id=-1, visibility=VISIBLE, width=194, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=120.0, y=35.0, child-count=2}
-|
-+------&gt;TextView{id=16908982, res-name=action_bar_title, visibility=VISIBLE, width=170, height=73, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Qcards, input-type=0, ime-target=false, has-links=false}
-|
-+------&gt;TextView{id=16908983, res-name=action_bar_subtitle, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
-|
-+----&gt;ActionMenuView{id=-1, visibility=VISIBLE, width=0, height=144, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=1080.0, y=0.0, child-count=0}
-|
-+---&gt;ActionBarContextView{id=16909179, res-name=action_context_bar, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-+--&gt;ActionBarContainer{id=16909180, res-name=split_action_bar, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
-|
-at dalvik.system.VMStack.getThreadStackTrace(Native Method)
-at java.lang.Thread.getStackTrace(Thread.java:580)
-at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:82)
-at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:53)
-at android.support.test.espresso.ViewInteraction.runSynchronouslyOnUiThread(ViewInteraction.java:184)
-at android.support.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:115)
-at android.support.test.espresso.ViewInteraction.perform(ViewInteraction.java:87)
-at android.support.test.espresso.contrib.DrawerActions.checkDrawer(DrawerActions.java:109)
-at android.support.test.espresso.contrib.DrawerActions.openDrawer(DrawerActions.java:71)
-at android.support.test.espresso.contrib.DrawerActions.openDrawer(DrawerActions.java:62)
-at com.example.qcards.BasicInstrumentationTest.testClickActionBarItem(BasicInstrumentationTest.java:390)
-at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:228)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -277,14 +68,14 @@ at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:18
 </thead>
 <tr>
 <td>testClickActionBarItem</td>
-<td class="failures">failed (30.232s)</td>
+<td class="success">passed (38.068s)</td>
 </tr>
 </table>
 </div>
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 2.2.1</a> at 18-sep-2015 20:25:46</p>
+<a href="http://www.gradle.org">Gradle 2.2.1</a> at 19-sep-2015 8:58:29</p>
 </div>
 </div>
 </body>
